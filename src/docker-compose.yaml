@@ -1,10 +1,10 @@
 services:
   web:
-    build: ./st_web
+    build: ./web
     ports:
       - "80:80"
     volumes:
-      - ./st_web:/app
+      - ./web:/app
     environment:
       TRANSLATOR_PROVIDER: google
       API_URL: "http://backend:8081"
