@@ -55,3 +55,29 @@ Get the progress digest of the user.
 #### implementation
 
 progress digest will load from a set of progress digests and return to the user.
+
+### /api/v1/recommendation_reading_material
+
+#### Description
+
+Get the recommendation reading material of the user.
+
+#### Parameters
+
+- `user_id` (int): The ID of the user.
+
+#### Response
+
+- `reading_materials` (list[dict]): The recommendation reading material of the user.
+
+- `reading_materials` (dict): The reading material.
+
+  - `title` (str): The title of the reading material.
+
+  - `url` (str): The URL of the reading material.
+
+#### implementation
+
+IDK
+
+###
