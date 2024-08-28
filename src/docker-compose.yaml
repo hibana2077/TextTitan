@@ -6,7 +6,6 @@ services:
     volumes:
       - ./web:/app
     environment:
-      NEXT_PUBLIC_API_URL: "http://backend:8081"
       NEXT_PUBLIC_BACKEND_SERVER: "http://backend:8081"
     depends_on:
       - backend
