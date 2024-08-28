@@ -1,5 +1,11 @@
 # IELTS Reading Practice Web App UI Design
 
+## 設定與框架
+
+- Next.js (APP router)
+- SSR (Server Side Rendering)
+- Tailwind CSS (CSS framework)
+
 ## 通用元素
 
 - 頂部導航欄：包含 Logo、首頁、練習、個人資料和設置的鏈接
