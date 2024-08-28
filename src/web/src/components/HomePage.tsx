@@ -1,8 +1,11 @@
 import React from 'react';
 import { BookOpen, User, Settings, BarChart2, Clock, BookMarked } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { BarChart } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import QuickTipsCarousel from '@/components/QuickTipsCarousel';
+import Navbar from '@/components/Navbar';
 
 interface HomePageProps {
   welcomeMessage: string;
@@ -20,16 +23,7 @@ const HomePage: React.FC<HomePageProps> = ({ welcomeMessage, progressDigest, rea
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-dodger-blue-900 to-dodger-blue-950 p-8">
-      <nav className="bg-dodger-blue-800 bg-opacity-50 backdrop-filter backdrop-blur-lg rounded-2xl shadow-lg p-4 mb-8">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-dodger-blue-100">Text Titan</div>
-          <div className="space-x-4">
-            <a href="#" className="text-dodger-blue-200 hover:text-dodger-blue-100 transition-colors"><BookOpen className="inline-block mr-1" size={20} />Practice</a>
-            <a href="#" className="text-dodger-blue-200 hover:text-dodger-blue-100 transition-colors"><User className="inline-block mr-1" size={20} />Profile</a>
-            <a href="#" className="text-dodger-blue-200 hover:text-dodger-blue-100 transition-colors"><Settings className="inline-block mr-1" size={20} />Settings</a>
-          </div>
-        </div>
-      </nav>
+        <Navbar />
 
       <main className="container mx-auto">
         <h1 className="text-4xl font-bold text-dodger-blue-100 mb-8 text-center">{welcomeMessage}</h1>
