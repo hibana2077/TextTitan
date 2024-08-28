@@ -1,11 +1,9 @@
-from langchain_community.vectorstores.faiss import FAISS
-from langchain_community.document_loaders import PyPDFLoader
-from langchain_community.embeddings import OllamaEmbeddings
 from contextlib import asynccontextmanager
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 import redis
+import random
 import os
 import time
 import uvicorn
@@ -45,6 +43,19 @@ def read_root():
     """
     return {"Hello": "World"}
 
+@app.get("/api/v1/welcome_message")
+def welcome_message():
+    """
+    A function that handles the welcome_message endpoint.
+
+    Returns:
+        dict: message: "welcome message"
+    """
+    welcome_messages = [
+        "Welcome Back!",
+    ]
+    random_message = random.choice(welcome_messages)
+    return {"message": random_message}
 
 if __name__ == "__main__":
     uvicorn.run(app, host=HOST, port=8081) # In docker need to change to 0.0.0.0
